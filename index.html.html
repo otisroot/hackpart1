@@ -120,7 +120,12 @@ function on()
 {
 one()
 }
-
+setInterval(function(){
+    document.getElementsByTagName('textarea')[0].style.color = "red";
+},1500)
+setInterval(function(){
+    document.getElementsByTagName('textarea')[0].style.color = "cyan";
+},4500)
 </script>
 </body>
 </html>
