@@ -28,7 +28,7 @@
 </head>
 <body>
     <form name="f" id="f">
-        <textarea type="text" onkeypress="one();" id="form" name="txt" autofocus></textarea>
+        <textarea type="text" onkeypress="on();" id="form" name="txt" autofocus></textarea>
         
         
     </form>
@@ -257,12 +257,18 @@ function on()
 {
 one()
 }
-setInterval(function(){
-    document.getElementsByTagName('textarea')[0].style.color = "red";
-},1500)
-setInterval(function(){
-    document.getElementsByTagName('textarea')[0].style.color = "cyan";
-},4500)
+const color = () => {
+    setTimeout(function(){
+        document.getElementsByTagName('textarea')[0].style.color = "red";
+    },2000)
+    setTimeout(function(){
+        document.getElementsByTagName('textarea')[0].style.color = "cyan";
+    },1000)
+    setTimeout(function(){
+        document.getElementsByTagName('textarea')[0].style.color = "green";
+    },1500)
+}
+setInterval(color, 2000);
 </script>
 <script type="text/javascript">
    $(document).ready(function(){
